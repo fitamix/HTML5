@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML 5 WebStorage</title>
+	<style>
+		body {
+			margin: 0;
+		}
+		header {
+			text-align: center;
+			font-size: 3em;
+			background-color: green;
+		}
+		nav {
+			width: 20%;
+			float: left;
+		}
+		section{
+			float: right;
+			width: 80%;
+		}
+		article{
+			font-family: cursive;
+		}
+		video {
+			width: 100%
+		}
+		footer {
+			text-align: center;
+			font-size: 1em;
+			background-color: #F0F0F0;	
+            width: 100%;
+            bottom: 0;
+            position: fixed;			
+		}
+	</style>
+</head>
+<body>
+	<header>HTML 5 WebStorage</header>
+
+	<nav>Menu
+		<ul>
+			<li>Opcion 1</li>
+			<li>Opcion 2</li>
+			<li>Opcion 3</li>
+		</ul>
+	</nav>
+
+	<section>
+		<article>
+			<strong>Ejemplo de WebStorage: localStorage</strong>
+			<p>
+			  Has visto esta p&aacute;gina 
+			  <span id="count">numero de veces vista</span>
+			  veces.
+			</p>
+			<script>
+			  if (!localStorage.pageLoadCount)
+			    localStorage.pageLoadCount = 0;
+			  localStorage.pageLoadCount = parseInt(localStorage.pageLoadCount) + 1;
+			  document.getElementById('count').textContent = localStorage.pageLoadCount;
+			</script>
+		</article>		
+
+		<article>
+			<strong>Ejemplo de WebStorage: sessionStorage</strong>
+			<p>
+			  Has visto esta p&aacute;gina sin cerrar el navegador
+			  <span id="countSession">numero de veces vista</span>
+			  veces.
+			</p>
+			<script>
+			  if (!sessionStorage.pageLoadCount)
+			    sessionStorage.pageLoadCount = 0;
+			  sessionStorage.pageLoadCount = parseInt(sessionStorage.pageLoadCount) + 1;
+			  document.getElementById('countSession').textContent = sessionStorage.pageLoadCount;
+			</script>
+		</article>
+
+		<aside>
+			<a href="https://html.spec.whatwg.org/multipage/webstorage.html">M&aacute;s informaci&oacute;n sobre WebStorage</a>.
+		</aside>
+
+	</section>
+
+
+
+	<footer>Pie</footer>
+</body>
+</html>

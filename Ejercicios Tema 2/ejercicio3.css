@@ -1,0 +1,14 @@
+body {
+	margin: 2em;
+}
+p {
+	font-size: 3em;
+	font-family: Arial;
+}
+a {
+	text-decoration: none;
+	color: green;
+}
+div {
+	background-color: black;
+}

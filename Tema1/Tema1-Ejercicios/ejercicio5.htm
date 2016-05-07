@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML 5 Geolocalizacion</title>
+	<style>
+		body {
+			margin: 0;
+		}
+		header {
+			text-align: center;
+			font-size: 3em;
+			background-color: green;
+		}
+		nav {
+			width: 20%;
+			float: left;
+		}
+		section{
+			float: right;
+			width: 80%;
+		}
+		article{
+			font-family: cursive;
+		}
+		video {
+			width: 100%
+		}
+		footer {
+			text-align: center;
+			font-size: 1em;
+			background-color: #F0F0F0;	
+            width: 100%;
+            bottom: 0;
+            position: fixed;			
+		}
+	</style>
+</head>
+<body>
+	<header>HTML 5 Geolocalizaci&oacute;n</header>
+
+	<nav>Menu
+		<ul>
+			<li>Opcion 1</li>
+			<li>Opcion 2</li>
+			<li>Opcion 3</li>
+		</ul>
+	</nav>
+
+	<section>
+		<article>
+			<strong>Ejemplo de Geolocalizaci&ocaute;n (solo funciona en un servidor con HTTPS)</strong>
+			<p>
+				<div id="map"></div>
+				<script>
+					var x = document.getElementById("map");
+					function getLocation() {
+					    if (navigator.geolocation) {
+					        navigator.geolocation.getCurrentPosition(showPosition);
+					    } else {
+					        x.innerHTML = "Geolocation is not supported by this browser.";
+					    }
+					}
+					function showPosition(position) {
+					    x.innerHTML = "Latitude: " + position.coords.latitude + 
+					    "<br>Longitude: " + position.coords.longitude; 
+					}
+
+					getLocation();
+				</script>
+			</p>
+		</article>
+
+		<aside>
+			<a href="https://html.spec.whatwg.org/multipage/webstorage.html">M&aacute;s informaci&oacute;n sobre WebStorage</a>.
+		</aside>
+
+	</section>
+
+
+
+	<footer>Pie</footer>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML 5 Multimedia</title>
+	<style>
+		body {
+			margin: 0;
+		}
+		header {
+			text-align: center;
+			font-size: 3em;
+			background-color: green;
+		}
+		nav {
+			width: 20%;
+			float: left;
+		}
+		section{
+			float: right;
+			width: 80%;
+		}
+		article{
+			font-family: cursive;
+		}
+		video {
+			width: 100%
+		}
+		footer {
+			text-align: center;
+			font-size: 1em;
+			background-color: #F0F0F0;	
+            width: 100%;
+            bottom: 0;
+            position: fixed;			
+		}
+	</style>
+	<script src="modernizr-2.0.js" type="text/javascript"></script>
+</head>
+<body>
+	<header>Cabecera</header>
+
+	<nav>Menu
+		<ul>
+			<li>Opcion 1</li>
+			<li>Opcion 2</li>
+			<li>Opcion 3</li>
+		</ul>
+	</nav>
+
+	<main>
+
+		<section>
+			<aside>
+				<div>Complete estos datos:</div>
+				<form>
+					Email: <input type="email" name="email" placeholder="email" required autofocus />
+					<br>
+					Fecha de nacimiento: 
+					<input type="date" name="date" required />
+					<br>
+					Edad: 
+					<input type="number" name="edad" placeholder="edad" required />
+					<br>
+					Rango: 
+					<input type="range" name="rango" required min="0" max="10" />
+					<br>
+					Hora: 
+					<input type="time" name="time" required />
+					<br>
+					URL: 
+					<input type="url" name="url" placeholder="URL"  required />
+					<br>
+					<input type="submit" name="Enviar">
+				</form>
+			</aside>
+		</section>
+	</main>
+
+	<footer>Pie</footer>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML 5 Canvas</title>
+	<script src="modernizr-2.0.js" type="text/javascript"></script>
+</head>
+<body>
+<canvas width="500" height="500"></canvas>
+<script type="text/javascript">
+	var canvas = document.getElementsByTagName('canvas');
+	if (canvas && canvas.length>0){
+		var elemento = canvas[0];
+		if (elemento && elemento.getContext) {
+			var ctx = elemento.getContext('2d');
+
+			//instrucciones para pintar en 2d
+			/*
+			// cara sonriente
+			ctx.beginPath();
+		    ctx.arc(75,75,50,0,Math.PI*2,true); // Outer circle
+		    ctx.moveTo(110,75);
+		    ctx.arc(75,75,35,0,Math.PI,false);  // Mouth (clockwise)
+		    ctx.moveTo(65,65);
+		    ctx.arc(60,65,5,0,Math.PI*2,true);  // Left eye
+		    ctx.moveTo(95,65);
+		    ctx.arc(90,65,5,0,Math.PI*2,true);  // Right eye
+		    ctx.stroke();			
+		    */
+
+		    /*
+		    // bocadillo comic
+		    ctx.beginPath();
+		    ctx.moveTo(75,25);
+		    ctx.quadraticCurveTo(25,25,25,62.5);
+		    ctx.quadraticCurveTo(25,100,50,100);
+		    ctx.quadraticCurveTo(50,120,30,125);
+		    ctx.quadraticCurveTo(60,120,65,100);
+		    ctx.quadraticCurveTo(125,100,125,62.5);
+		    ctx.quadraticCurveTo(125,25,75,25);
+		    ctx.stroke();
+		    */
+
+		    
+
+		}
+	}
+</script>
+</body>
+</html>

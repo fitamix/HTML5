@@ -19,6 +19,7 @@
 ###Elemento DIV
 ###Propiedades float y clear
 ###Imágenes en CSS
+###Media Queries
 
 ##Tema 4. HTML5 en profundidad
 ###Semántica HTML5 y cambios con HTML4

@@ -1,0 +1,12 @@
+{
+	"es": {
+		"titulo": "Esto es un título",
+		"pie": "Esto es el pie",
+		"cuerpo": "Esto es el cuerpo"
+	},
+	"en": {
+		"titulo": "This is the title",
+		"pie": "This is the footer",
+		"cuerpo": "This is the body"
+	}
+}

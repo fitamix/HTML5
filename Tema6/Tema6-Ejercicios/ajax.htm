@@ -1,0 +1,24 @@
+<!Doctype html>
+<html>
+<head>
+	<script src="jquery-1.12.3.min.js"></script>
+</head>
+<body>
+	<div id="noticia"></div>
+	<a href="1.htm" class="interno">Uno</a>
+	<a href="2.htm" class="interno">Dos</a>
+	<a href="http://www.rtve.es" >RTVE</a>
+
+	<script>
+
+		$('a.interno').on('click', function(e){
+			event.preventDefault();
+			var $enlace = $(this);
+			var url = $enlace.attr('href');
+
+			$('#noticia').load( url + ' div' );
+		})
+
+	</script>
+</body>
+</html>

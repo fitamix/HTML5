@@ -1,0 +1,33 @@
+<!Doctype html>
+<html>
+<head>
+	<script src="jquery-1.12.3.min.js"></script>
+</head>
+<body>
+	<div id="titulo">Esto es el t&iacute;tulo sin traducir</div>
+	<div id="cuerpo">Esto es el cuerpo sin traducir</div>
+	<div id="pie">Esto es el pie sin traducir</div>
+
+	<a href="http://www.rtve.es"  data-idioma="es">Traducir a espa&ntilde;ol</a> o
+	<input type="button" data-idioma="en" value="Translate to English">
+
+	<script>
+
+		$('input:button,a').on('click', function(e){
+			event.preventDefault();
+			var idioma = $(this).attr('data-idioma');
+			console.log(idioma);
+
+			$.getJSON( 'translate.json', function( data ) {
+
+				var traduccion=data[idioma];
+			  	$.each( traduccion, function( key, val ) {
+			  		$('#' + key).text(val);
+			  	});
+			});
+
+		})
+
+	</script>
+</body>
+</html>
